@@ -11,6 +11,8 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
+	
+	<script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
 
     <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
 
@@ -123,14 +125,31 @@
 
                                             </h3>
                                         </div>
-                                        <h3 >
-                                            <?php echo $_POST['price'] ?>
+                                        <h3>
+											<?php echo "$" . $_POST['price'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+									<!--
+									<form action="payment.php" method="POST">
+									  <input type="hidden" name="img" value="./assets/003.jpg">
+									  <input type="hidden" name="title" value=?php echo $_POST['title'] ?> >
+									  <input type="hidden" name="price" value=?php echo $_POST['price'] ?> >
+									  <input type="hidden" name="unit" value=?php echo $_POST['unit'] ?> >
+									  <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+									   data-preference-id="?php echo $preference->id; ?>">
+									  </script>
+									</form>
+									-->
+									<form action="payment.php" method="POST">
+										<input type="hidden" name="img" value="assets/003.jpg">
+										<input type="hidden" name="title" value=<?php echo $_POST['title'] ?> >
+										<input type="hidden" name="price" value=<?php echo $_POST['price'] ?> >
+										<input type="hidden" name="unit" value=<?php echo $_POST['unit'] ?> >
+										<button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+									</form>
                                 </div>
                             </div>
                         </div>
