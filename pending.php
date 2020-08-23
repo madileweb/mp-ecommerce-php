@@ -4,7 +4,7 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=1024">
-    <title>Tienda e-commerce - Sucess</title>
+    <title>Tienda e-commerce - Pending</title>
 	
 	<script src="https://www.mercadopago.com/v2/security.js" view=""></script>
 
